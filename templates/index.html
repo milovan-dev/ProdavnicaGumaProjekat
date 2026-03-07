@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servis&Gume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="glavna-navigacija">
+       <div class="logo">
+            <h2><a href="/" style="color: white; text-decoration: none;">🛞 Servis&Gume</a></h2>
+        </div>
+        
+        <ul class="meni">
+            <li class="istaknuto"><a href="/akcije">AKCIJA</a></li>
+            
+           <li class="dropdown">
+                <a href="#">SERVIS <span class="strelica">▼</span></a>
+                <div class="dropdown-sadrzaj">
+                    <div class="kolona">
+                        <h4>AUTO SERVIS</h4>
+                        <a href="/zakazi">Mali servis</a>
+                        <a href="/zakazi">Veliki servis</a>
+                        <a href="/zakazi">Zamena kočionog sistema</a>
+                    </div>
+                    <div class="kolona">
+                        <h4>VULKANIZERSKE USLUGE</h4>
+                        <a href="/zakazi">Montaža i balansiranje</a>
+                        <a href="/zakazi">Popravka guma</a>
+                    </div>
+                </div>
+            </li>
+            
+            <li><a href="/proizvodi">GUME</a></li>
+            
+            <li class="zakazi-tab"><a href="/zakazi">📅 Upit za auto servis</a></li>
+        </ul>
+        
+        <div class="ikone">
+            <span>
+                <a href="/korpa" style="color: white; text-decoration: none;">
+                    🛒 Moja korpa 
+                    <span class="korpa-brojac">
+                        {{ session.korpa|length if session.korpa else 0 }}
+                    </span>
+                </a>
+            </span>
+        </div>
+    </nav>

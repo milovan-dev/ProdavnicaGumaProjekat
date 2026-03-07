@@ -1,0 +1,166 @@
+/* Osnovna podesavanja stranice */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #cc0000; 
+}
+
+/* NAVIGACIONI BAR */
+.glavna-navigacija {
+    display: flex;
+    align-items: center;
+    background-color: #1c1d21;
+    color: white;
+    padding: 0 50px;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    flex: 1; /* Zauzima tacno levu trecinu stranice */
+}
+
+.meni {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    flex: 1; 
+    justify-content: center; /* Drzi stavke u centru ekrana */
+}
+
+.ikone {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; /* Gura korpu skroz uz desnu ivicu */
+    align-items: center;
+}
+
+.meni > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.meni > li > a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 25px 20px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.meni > li > a:hover {
+    color: white;
+}
+
+.strelica {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+/* Dugme AKCIJA */
+.istaknuto {
+    background-color: #b50000; 
+}
+.istaknuto > a {
+    color: white !important;
+}
+.istaknuto:hover {
+    background-color: #004494;
+}
+
+.dropdown-sadrzaj {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1c1d21;
+    min-width: 400px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    z-index: 1000;
+    padding: 30px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    border-top: 3px solid #cc0000; 
+}
+
+/* Prikazuje se tek kada se misem predje preko dugmeta GUME */
+.dropdown:hover .dropdown-sadrzaj {
+    display: grid; 
+}
+
+.kolona h4 {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.kolona a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.kolona a:hover {
+    color: white;
+}
+
+/* Brojac za korpu */
+.ikone span {
+    position: relative; 
+    margin-left: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+}
+.ikone span:hover {
+    color: white;
+}
+
+.korpa-brojac {
+    position: absolute;
+    left: -16px;
+    top: -6px;      
+    right: -2px;    
+    background-color: #cc0000;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* DUGME ZA ZAKAZIVANJE  */
+.zakazi-tab a {
+    background-color: rgba(204, 0, 0, 0.1); 
+    border: 2px solid #cc0000;
+    border-radius: 6px;
+    color: white !important;
+    padding: 10px 20px !important; 
+    margin-left: 20px; 
+    font-size: 16px !important; 
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.zakazi-tab a:hover {
+    background-color: #cc0000;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(204, 0, 0, 0.4);
+}
