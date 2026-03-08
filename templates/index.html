@@ -50,3 +50,77 @@
             </span>
         </div>
     </nav>
+<!--Uvodna sekcija-->
+    <section class="hero-sekcija">
+        <div class="filter-kontejner">
+            <h2>Pronađite odgovarajuće gume</h2>
+            <!--Forma za izbor-->
+            <form action="/proizvodi" method="GET" class="filter-forma">
+                <select name="sirina">
+                    <option value="">Širina</option>
+                    <option value="195">195</option>
+                    <option value="205">205</option>
+                    <option value="225">225</option>
+                    <option value="235">235</option>
+                </select>
+
+                <select name="visina">
+                    <option value="">Visina</option>
+                    <option value="45">45</option>
+                    <option value="55">55</option>
+                    <option value="60">60</option>
+                    <option value="65">65</option>
+                    <option value="75">75</option>
+                </select>
+
+                <select name="precnik">
+                    <option value="">Prečnik</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                </select>
+                <select name="sezona">
+                    <option value="">Sezona</option>
+                    <option value="Letnja">Letnja</option>
+                    <option value="Zimska">Zimska</option>
+                    <option value="Sve sezone">Sve sezone</option>
+                </select>
+                <button type="submit" class="dugme-pretraga">Pretraži</button>
+            </form> </div>
+    </section>
+    <!--Akcija baner-->
+    <div class="akcija-baner">
+        <h3>🔥 Izdvajamo iz akcije 🔥</h3>
+        <p>Najbolje cene guma za predstojeću sezonu!</p>
+    </div>
+
+    <section class="ponuda-sekcija">
+        <div class="gume-kontejner">
+            {% for guma in gume %}
+                <div class="guma-kartica">
+                    {% if guma.popust > 0 %}
+                        <div class="akcija-bedz">-%{{ guma.popust }}</div>
+                    {% endif %}
+
+                    <div class="brend">{{ guma.proizvodjac }} | {{ guma.kategorija }}</div>
+                    <img src="/static/images/{{ guma.slika_url }}" alt="{{ guma.model }}" class="slika-gume">
+                    <h3 class="model">{{ guma.model }}</h3>
+                    <p class="dimenzije">{{ guma.sirina }}/{{ guma.visina }} R{{ guma.precnik }}</p>
+                    
+                    <div class="cena-kontejner">
+                        {% if guma.popust > 0 %}
+                            <span class="stara-cena">{{ guma.cena }} RSD</span>
+                            <span class="nova-cena">{{ (guma.cena|float * (1 - guma.popust / 100))|int }} RSD</span>
+                        {% else %}
+                            <span class="prava-cena">{{ guma.cena }} RSD</span>
+                        {% endif %}
+                    </div>
+
+                    <form action="/dodaj_u_korpu/{{ guma.id }}" method="POST" style="margin-top: 15px;">
+                        <button type="submit" class="dugme-korpa" style="margin-top: 0;">Dodaj u korpu</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
