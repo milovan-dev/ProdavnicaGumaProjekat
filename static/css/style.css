@@ -364,3 +364,317 @@ h1 {
     font-weight: bold;
     font-size: 20px;
 }
+
+/* Info sekcije, Brendovi i Footer) */
+
+/* ZASTO KUPITI GUME KOD NAS */
+.zasto-mi-sekcija {
+    padding: 60px 20px 80px 20px;
+    background-color: #fff; 
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.zasto-naslov {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.zasto-kontejner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.zasto-kartica {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-top: 4px solid #cc0000; 
+    transition: transform 0.3s;
+}
+
+.zasto-kartica:hover {
+    transform: translateY(-5px);
+}
+
+.zasto-ikona {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.zasto-kartica h3 {
+    color: #cc0000;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.zasto-kartica p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* PRELAZNI BANER ZA SERVIS */
+.servis-baner {
+    background: linear-gradient(90deg, #1a1a1a 0%, #333 100%); 
+    color: white;
+    text-align: center;
+    padding: 25px 40px;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto -40px auto; 
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 10;
+    border: 1px solid #444;
+}
+
+.servis-baner h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.servis-baner p {
+    margin: 0;
+    color: #aaa;
+    font-size: 16px;
+}
+
+.usluge-sekcija {
+    background-color: #1a1a1a; 
+    color: white;
+    padding: 60px 20px;
+    margin-top: 50px;
+}
+
+.usluge-naslov {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.usluga-red {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 0 auto 60px auto;
+    gap: 60px; 
+}
+
+.usluga-red.obrnuto {
+    flex-direction: row-reverse;
+}
+
+.usluga-tekst {
+    flex: 1; 
+}
+
+.usluga-tekst h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #cc0000; 
+}
+
+.usluga-tekst p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.usluga-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid #cc0000;
+    padding-bottom: 3px;
+    transition: color 0.3s;
+}
+
+.usluga-link:hover {
+    color: #cc0000;
+}
+
+.usluga-slika {
+    flex: 1; 
+}
+
+.usluga-slika img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover; 
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.pogodnosti-sekcija {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.pogodnost-kartica {
+    background-color: #1c1d21; 
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+    flex: 1; 
+    border: 1px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.pogodnost-kartica:hover {
+    transform: translateY(-5px);
+    border-color: #cc0000; 
+}
+
+.pogodnost-ikona {
+    font-size: 45px;
+    margin-right: 20px;
+}
+
+.pogodnost-tekst h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.pogodnost-tekst p {
+    margin: 0;
+    font-size: 13px;
+    color: #aaa;
+}
+
+
+.brendovi-sekcija-nova {
+    background-color: #111; 
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.brendovi-naslov {
+    color: #ccc;
+    margin-bottom: 50px;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.brendovi-naslov strong {
+    color: white;
+    font-weight: bold;
+}
+
+.brendovi-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.brend-logo-novi {
+    color: #444; 
+    font-size: 22px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 2px;
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.brend-logo-novi:hover {
+    color: #fff; 
+    transform: scale(1.1); 
+}
+
+/* FOOTER */
+.novi-footer {
+    background-color: #111;
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    padding-bottom: 20px; 
+}
+
+.footer-sadrzaj {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 20px 20px;
+    gap: 30px; 
+    flex-wrap: wrap; 
+}
+
+.footer-kolona {
+    flex: 1; 
+    min-width: 200px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.footer-kolona h4 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.footer-kolona p, .footer-kolona a {
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-kolona a:hover {
+    color: #cc0000;
+}
+
+.social-ikone {
+    margin-top: 20px;
+}
+
+.social-ikone a {
+    font-size: 28px;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.social-ikone a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.ikona-insta { color: #E1306C; }
+.ikona-fb { color: #1877F2; }
+.ikona-tiktok { color: #ffffff; }
+
+.social-ikone a:hover { filter: brightness(1.2); }

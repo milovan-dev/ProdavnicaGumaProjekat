@@ -50,11 +50,11 @@
             </span>
         </div>
     </nav>
-<!--Uvodna sekcija-->
+
     <section class="hero-sekcija">
         <div class="filter-kontejner">
             <h2>Pronađite odgovarajuće gume</h2>
-            <!--Forma za izbor-->
+            
             <form action="/proizvodi" method="GET" class="filter-forma">
                 <select name="sirina">
                     <option value="">Širina</option>
@@ -89,7 +89,7 @@
                 <button type="submit" class="dugme-pretraga">Pretraži</button>
             </form> </div>
     </section>
-    <!--Akcija baner-->
+
     <div class="akcija-baner">
         <h3>🔥 Izdvajamo iz akcije 🔥</h3>
         <p>Najbolje cene guma za predstojeću sezonu!</p>
@@ -124,3 +124,152 @@
             {% endfor %}
         </div>
     </section>
+
+    <section class="zasto-mi-sekcija">
+        <h2 class="zasto-naslov">Zašto je najbolje kupiti gume kod nas?</h2>
+        <div class="zasto-kontejner">
+            
+            <div class="zasto-kartica">
+                <div class="zasto-ikona">🌍</div>
+                <h3>Najveći izbor brendova</h3>
+                <p>Od premijum do budžet varijanti. Nudimo gume preko 20 svetskih proizvođača kako bismo zadovoljili apsolutno sve vaše potrebe i mogućnosti.</p>
+            </div>
+            
+            <div class="zasto-kartica">
+                <div class="zasto-ikona">💬</div>
+                <h3>Podrška naših agenata</h3>
+                <p>Niste sigurni koja guma najviše odgovara vašem stilu vožnje? Naš stručni tim vam je na raspolaganju za besplatne konsultacije i savete.</p>
+            </div>
+            
+            <div class="zasto-kartica">
+                <div class="zasto-ikona">🏷️</div>
+                <h3>Česte akcije i popusti</h3>
+                <p>Redovno organizujemo sezonske popuste. Pratite naš sajt jer kod nas uvek možete dobiti vrhunski kvalitet po najpovoljnijim cenama.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="servis-baner">
+        <h3>🛠️ Pored prodaje guma, nudimo i usluge servisa 🛠️</h3>
+        <p>Sve što je vašem automobilu potrebno - na jednom mestu!</p>
+    </div>
+        <section class="usluge-sekcija">
+        <h2 class="usluge-naslov">Zašto izabrati naš servis?</h2>
+
+        <div class="usluga-red">
+            <div class="usluga-tekst">
+                <h3>Mali Servis</h3>
+                <p>Redovna provera i zamena motornog ulja, filtera ulja, vazduha i kabine. Obezbedite dugovečnost, smanjite potrošnju i osigurajte pouzdanost vašeg motora uz naše stručne mehaničare i delove vrhunskog kvaliteta.</p>
+                <a href="/zakazi" class="usluga-link">Zakaži servis ➝</a>
+            </div>
+            <div class="usluga-slika">
+                <img src="/static/images/mali-servis.jpg" alt="Mali servis">
+            </div>
+        </div>
+
+        <div class="usluga-red obrnuto">
+            <div class="usluga-slika">
+                <img src="/static/images/veliki-servis.jpg" alt="Veliki servis">
+            </div>
+            <div class="usluga-tekst">
+                <h3>Veliki Servis</h3>
+                <p>Kompletna zamena zupčastog kaiša, španera, rolera, vodene pumpe i antifriza. Preventivno održavanje je ključno – čuva vaš automobil od ozbiljnih i skupih kvarova na putu. Prepustite brigu našem obučenom timu.</p>
+                <a href="/zakazi" class="usluga-link">Zakaži servis ➝</a>
+            </div>
+        </div>
+
+        <div class="usluga-red">
+            <div class="usluga-tekst">
+                <h3>Besplatna Zamena Guma</h3>
+                <p>Kupovinom seta od 4 gume preko našeg web sajta ili direktno u poslovnici, ostvarujete pravo na potpuno besplatnu montažu i balansiranje. Vaša bezbednost na putu je naš apsolutni prioritet.</p>
+                <a href="/zakazi" class="usluga-link">Zakaži servis ➝</a>
+            </div>
+            <div class="usluga-slika">
+                <img src="/static/images/zamena-guma.jpg" alt="Besplatna zamena guma">
+            </div>
+        </div>
+    </section>
+    <section class="pogodnosti-sekcija">
+        <div class="pogodnost-kartica">
+            <div class="pogodnost-ikona">🚚</div>
+            <div class="pogodnost-tekst">
+                <h4>BRZA ISPORUKA</h4>
+                <p>Na teritoriji cele Srbije</p>
+            </div>
+        </div>
+        
+        <div class="pogodnost-kartica">
+            <div class="pogodnost-ikona">💳</div>
+            <div class="pogodnost-tekst">
+                <h4>SVI NAČINI PLAĆANJA</h4>
+                <p>Platite online na do 12 rata</p>
+            </div>
+        </div>
+        
+        <div class="pogodnost-kartica">
+            <div class="pogodnost-ikona">🛡️</div>
+            <div class="pogodnost-tekst">
+                <h4>BEZBEDNA KUPOVINA</h4>
+                <p>Svi vaši podaci su zaštićeni</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="brendovi-sekcija-nova">
+        <h2 class="brendovi-naslov">Najveći izbor <strong>guma svih brendova</strong></h2>
+      <div class="brendovi-grid">
+            <a href="/proizvodi?proizvodjac=Michelin" class="brend-logo-novi" style="text-decoration: none;">MICHELIN</a>
+            <a href="/proizvodi?proizvodjac=Sava" class="brend-logo-novi" style="text-decoration: none;">SAVA</a>
+            <a href="/proizvodi?proizvodjac=Tigar" class="brend-logo-novi" style="text-decoration: none;">TIGAR</a>
+            <a href="/proizvodi?proizvodjac=Pirelli" class="brend-logo-novi" style="text-decoration: none;">PIRELLI</a>
+            <a href="/proizvodi?proizvodjac=Continental" class="brend-logo-novi" style="text-decoration: none;">CONTINENTAL</a>
+            <a href="/proizvodi?proizvodjac=Dunlop" class="brend-logo-novi" style="text-decoration: none;">DUNLOP</a>
+            <a href="/proizvodi?proizvodjac=Goodyear" class="brend-logo-novi" style="text-decoration: none;">GOODYEAR</a>
+            <a href="/proizvodi?proizvodjac=Hankook" class="brend-logo-novi" style="text-decoration: none;">HANKOOK</a>
+            <a href="/proizvodi?proizvodjac=Lassa" class="brend-logo-novi" style="text-decoration: none;">LASSA</a>
+            <a href="/proizvodi?proizvodjac=Bridgestone" class="brend-logo-novi" style="text-decoration: none;">BRIDGESTONE</a>
+        </div>
+    </section>
+
+    <footer class="novi-footer">
+        <div class="footer-sadrzaj">
+            
+            <div class="footer-kolona">
+                <h2 style="color: white; margin-bottom: 20px; font-style: italic;">🛞 Servis&Gume</h2>
+                <p>Telefon: 011 / 333 - 555</p>
+                <p>E-mail: info@servisgume.rs</p>
+                <p>Radno vreme: Pon - Sub | 08:00 - 20:00h</p>
+                <div class="social-ikone">
+                    <a href="#" class="ikona-insta"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="ikona-fb"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="ikona-tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-kolona">
+                <h4>ADRESA</h4>
+                <p>Cara Dušana 28, 32000 Čačak</p>
+            </div>
+            
+            <div class="footer-kolona">
+                <h4>KATEGORIJE</h4>
+                <a href="/proizvodi?kategorija=Putnička+vozila">Putnička vozila</a>
+                <a href="/proizvodi?kategorija=Džip+/+SUV">SUV i Terenci</a>
+                <a href="/proizvodi?kategorija=Kombi+vozila">Kombi vozila</a>
+                <a href="/akcije">Gume na akciji</a>
+            </div>
+
+            <div class="footer-kolona">
+                <h4>STRANICE</h4>
+                <a href="/">Početna</a>
+                <a href="/proizvodi">Sve gume</a>
+                <a href="/zakazi">Zakaži servis</a>
+                <a href="/korpa">Moja korpa</a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
