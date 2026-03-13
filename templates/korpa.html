@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vaša korpa - Servis&Gume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="background-color: #f4f4f9;">
+
+    <nav class="glavna-navigacija">
+        <div class="logo"><h2><a href="/" style="color: white; text-decoration: none;">🛞 Servis&Gume</a></h2></div>
+        <ul class="meni"><li><a href="/proizvodi">⬅ NASTAVI KUPOVINU</a></li></ul>
+    </nav>
+
+    <div class="zakazivanje-kontejner" style="max-width: 800px;">
+        <h2>🛒 Pregled vaše korpe</h2>
+        <hr style="border: 0; border-top: 1px solid #ddd; margin-bottom: 20px;">
+
+        {% if gume_u_korpi %}
+            <ul style="list-style: none; padding: 0;">
+                {% for guma in gume_u_korpi %}
+                <li style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #eee;">
+                    <div>
+                        <strong style="font-size: 18px;">{{ guma.proizvodjac }} {{ guma.model }}</strong><br>
+                        <span style="color: #666;">Dimenzije: {{ guma.sirina }}/{{ guma.visina }} R{{ guma.precnik }}</span>
+                    </div>
+                    <div style="font-size: 18px; font-weight: bold; color: #cc0000;">
+                        {{ guma.prava_cena }} RSD
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <div style="text-align: right; margin-top: 30px; font-size: 24px;">
+                Ukupno za plaćanje: <strong style="color: #cc0000;">{{ ukupno }} RSD</strong>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <a href="/isprazni_korpu" style="color: #999; text-decoration: none; padding: 10px;">🗑️ Isprazni korpu</a>
+                <a href="/checkout" class="dugme-pretraga" style="text-decoration: none;">Završi kupovinu</a>
+            </div>
+        {% else %}
+            <div style="text-align: center; padding: 50px 0;">
+                <h3>Vaša korpa je trenutno prazna.</h3>
+                <p>Pogledajte našu ponudu <a href="/proizvodi" style="color: #cc0000;">ovde</a>.</p>
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

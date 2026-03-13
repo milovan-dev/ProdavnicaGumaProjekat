@@ -146,6 +146,63 @@ def zakazi_servis():
 
     return render_template('zakazivanje.html', poruka=poruka)
 
+# RUTA ZA DODAVANJE U KORPU (Izvrsava se u pozadini kada kliknes "Dodaj u korpu")
+@app.route('/dodaj_u_korpu/<int:guma_id>', methods=['POST'])
+def dodaj_u_korpu(guma_id):
+    if 'korpa' not in session:
+        session['korpa'] = []
+    
+    korpa = session['korpa']
+    korpa.append(guma_id)
+    session['korpa'] = korpa
+    # Vraća korisnika na istu stranicu na kojoj je bio
+    return redirect(request.referrer or url_for('pocetna'))
+
+# RUTA ZA PRIKAZ SAME KORPE
+@app.route('/korpa')
+def pregled_korpe():
+    if 'korpa' not in session or not session['korpa']:
+        return render_template('korpa.html', gume_u_korpi=[], ukupno=0)
+    
+    konekcija = get_db_connection()
+    kursor = konekcija.cursor(dictionary=True)
+    
+    # Ovaj deo formatira SQL upit u zavisnosti od toga koliko guma ima u korpi
+    format_string = ','.join(['%s'] * len(session['korpa']))
+    upit = f"""
+        SELECT gume.*, proizvodjaci.naziv AS proizvodjac 
+        FROM gume 
+        JOIN proizvodjaci ON gume.proizvodjac_id = proizvodjaci.id
+        WHERE gume.id IN ({format_string})
+    """
+    kursor.execute(upit, tuple(session['korpa']))
+    gume_baza = kursor.fetchall()
+    kursor.close()
+    konekcija.close()
+    
+    gume_u_korpi = []
+    ukupno = 0
+    # Prolazimo kroz sve ID-jeve iz sesije i spajamo ih sa podacima iz baze
+    for guma_id in session['korpa']:
+        for g in gume_baza:
+            if g['id'] == guma_id:
+                stavka = g.copy() # Kopiramo da ne pokvarimo original
+                # Racunanje tacne cene sa popustom
+                prava_cena = int(float(stavka['cena']) * (1 - stavka['popust'] / 100)) if stavka.get('popust', 0) > 0 else int(float(stavka['cena']))
+                stavka['prava_cena'] = prava_cena 
+                
+                gume_u_korpi.append(stavka)
+                ukupno += prava_cena
+                break
+                
+    return render_template('korpa.html', gume_u_korpi=gume_u_korpi, ukupno=ukupno)
+
+# RUTA ZA PRAZNJENJE KORPE (Brise sve iz sesije)
+@app.route('/isprazni_korpu')
+def isprazni_korpu():
+    session.pop('korpa', None)
+    return redirect(url_for('pregled_korpe'))
+
 
 if __name__ == '__main__':
     
