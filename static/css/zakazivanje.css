@@ -1,0 +1,121 @@
+.pozadina-servis {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/hero-pozadina.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.zakazivanje-kontejner {
+    max-width: 550px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.zakazivanje-kontejner h2 {
+    text-align: center;
+    color: white; 
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.forma-grupa {
+    margin-bottom: 20px;
+}
+
+.forma-grupa label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+.forma-grupa input, 
+.forma-grupa select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.forma-grupa input:focus, 
+.forma-grupa select:focus {
+    border-color: #ff4500; 
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0.4);
+}
+
+.dugme-servis {
+    width: 100%;
+    background-color: #e63946;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.dugme-servis:hover {
+    background-color: #c1121f;
+    transform: translateY(-2px);
+}
+
+.dugme-servis:active {
+    transform: translateY(0);
+}
+
+.uspesna-poruka {
+    background-color: rgba(212, 237, 218, 0.9);
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-left: 5px solid #28a745;
+}
+
+/* MOBILNA VERZIJA ZA ZAKAZIVANJE */
+@media screen and (max-width: 768px) {
+    .zakazivanje-kontejner {
+        width: 95% !important; 
+        max-width: 100% !important; 
+        margin: 20px auto !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .zakazivanje-kontejner h2 {
+        font-size: 22px !important;
+    }
+
+    .forma-grupa input, 
+    .forma-grupa select {
+        width: 100% !important; 
+        box-sizing: border-box !important;
+        font-size: 16px !important; 
+        padding: 12px !important;
+    }
+
+    .dugme-servis {
+        width: 100% !important; 
+        padding: 15px !important;
+        font-size: 18px !important;
+    }
+}

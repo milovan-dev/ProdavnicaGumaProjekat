@@ -1,0 +1,94 @@
+.kasa-pozadina {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/hero-pozadina.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 890px; 
+}
+
+.checkout-naslov {
+    text-align: center;
+    color: #cc0000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ukupno-naplata {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.zakazivanje-kontejner {
+    max-width: 500px; 
+    margin: 50px auto; 
+    padding: 30px;
+}
+
+.zakazivanje-forma {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forma-grupa {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.forma-grupa label {
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.forma-grupa input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.forma-grupa input:focus {
+    outline: none;
+    border-color: #cc0000;
+    box-shadow: 0 0 5px rgba(204, 0, 0, 0.2);
+}
+
+.dugme-potvrda {
+    display: block;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.dugme-potvrda:hover {
+    background-color: #a30000;
+}
+
+.logo a, .logo a:visited, .logo a:link {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.meni a, .meni a:visited {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.meni a:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,135 @@
+.korpa-pozadina {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/hero-pozadina.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 890px; 
+}
+
+.logo a, 
+.logo a:link, 
+.logo a:visited, 
+.logo a:hover, 
+.logo a:active {
+    color: white !important;         
+    text-decoration: none !important; 
+    outline: none;                   
+}
+
+.korpa-kontejner {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.korpa-kontejner h2{
+    color: white;
+}
+
+.linija {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.korpa-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.korpa-stavka {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: transform 0.2s;
+}
+
+.korpa-stavka:hover {
+    transform: translateX(5px);
+    border-color: #cc0000;
+}
+
+.proizvod-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.proizvod-naslov {
+    font-size: 18px;
+    color: #333;
+}
+
+.proizvod-dimenzije {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.proizvod-cena {
+    font-size: 18px;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+.ukupno-sekcija {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 22px;
+    border-top: 2px solid #f4f4f9;
+    padding-top: 20px;
+    color: white;
+}
+
+.ukupna-cifra {
+    color: #cc0000;
+    font-size: 28px;
+}
+
+.korpa-akcije {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.korpa-akcije .dugme-pretraga{
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.link-isprazni {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.link-isprazni:hover {
+    color: #cc0000;
+}
+
+.prazna-korpa {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.prazna-korpa h3, .prazna-korpa p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.prazna-korpa a {
+    color: #cc0000;
+    font-weight: bold;
+    text-decoration: none;
+}
