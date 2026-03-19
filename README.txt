@@ -12,17 +12,70 @@ Takođe na sajtu je moguće zakazati servisne usluge na stranici servis gde se p
 Nakon odabira servisa korisnik popunjava formu i bira datum servisa.
 
 Tehnologije korišćene u izdradi sajta:
-***Tehnologije su i dalje podlozne promenama, na kraju projekta bice update README.md fajla i spisak svih korišćenih tehnologija***
 
-Potrebni alati i opis za pokretanje sajta:
-Od alata instaliranih na računar potrebni su python i flask, python se instalira sa zvaničnog sajta python.org dok se flask instalira unutar terminala projekta otvorenog u VScode sa komandom pip install flask (ili ako ne radi onda python -m pip install flask).
-Nakon instaliranja pokreće se fajl server.py komandom u terminalu: python server.py
-U zavisnosti od instalirane verzije pythona probati neki od sledećih komandi:
-python3 server.py
-py server.py
 
-Povezivanje SQL baze podataka:
-Kod baze se nalazi u fajlu prodavnica_guma.sql i ona je povezana sa projektom preko mysql connectora u pythonu.
-Korisnik pokreće i unosi bazu sledećim koracima:
-U programu XAMPP pokrene se Apache server i MySQL, zatim se pristupi phpmyadmin-u tako što se u browseru kuca localhost i izabere se kartica phpmyadmin ili se u XAMPP-u klikne na button admin pored MySQL.
-Kreira se baza i zatim se importuje fajl prodavnica_guma.sql u tu bazu.
+----Preuzimanje i instalacija potrebnih programa
+
+Da biste pokrenuli ovaj projekat na svom računaru, potrebno je da imate instalirana sledeća tri programa. Ukoliko ih nemate, preuzmite ih sa priloženih linkova:
+
+Visual Studio Code 
+-Preuzimanje: https://code.visualstudio.com/
+
+----Python
+Python:
+-Preuzimanje: https://www.python.org/downloads/
+-VAŽNO PRI INSTALACIJI: Kada pokrenete instalaciju, na samom prvom prozorčiću na dnu ekrana OBAVEZNO štiklirajte opciju `Add Python to PATH`(ili `Add python.exe to PATH`)
+
+----XAMPP
+
+XAMPP nam omogućava da napravimo lokalni server i koristimo MySQL bazu podataka na našem kompjuteru.
+
+-Preuzimanje: https://www.apachefriends.org/index.html
+-Pokretanje: Nakon instalacije, otvorite XAMPP Control Panel i kliknite na dugme Start pored modula Apache i MySQL.
+-Zatim u pretraživaču idite na `http://localhost/phpmyadmin/` kako biste uvezli bazu podataka.
+
+--Dodavanje baze u MYSQL:
+
+-Bazu mozete dodati tako sto pristupite http://localhost/phpmyadmin/ i kliknete na +New i za ime stavite prodavnica_guma i izaberite utf8mb4_general_ci zatim kliknite na create.
+-Zatim kliknite na tu novu bazu i kliknite na karticu Import, izaberite choose file i izaberite Bazu koja se nalazi u folderu projekta, zatim kliknete na import.
+
+---
+
+----Tehnologije korišćene u izradi sajta
+
+-Frontend (Izgled i interaktivnost klijentske strane)
+
+-HTML5:
+-CSS3:
+-JavaScript (JS):
+-AJAX (Fetch API)- dodavanje proizvoda u korpu bez osvezavanja stranice
+
+---- Backend (Serverska logika aplikacije)
+-Python: Glavni programski jezik zadužen za obradu podataka, logiku korpe i komunikaciju sa bazom.
+-Flask: backend framework
+-Jinja2: Omogućava nam da unutar HTML fajlova koristimo Python komande (poput `if` uslova i `for` petlji) kako bismo dinamički prikazivali proizvode iz baze.
+
+----Baza podataka
+-MySQL: Relaciona baza podataka u kojoj trajno čuvamo sve informacije o korisnicima, proizvodima, trenutnim cenama u korpi i zakazanim servisima.
+
+---
+
+----Pokretanje aplikacije
+
+1. Otvorite folder projekta u **Visual Studio Code-u**.
+2. Otvorite terminal unutar editora (`Terminal -> New Terminal`).
+3. Instalirajte potrebne dodatke (Upustvo se nalazi u requirements.txt file-u)
+   
+-Zatim pokrecemo server tako sto napisemo sledecu komandu u terminal python server.py
+
+-U terminalu ce se pojaviti adresa http://127.0.0.1:5000 zadrzimo ctrl i kliknemo na tu adresu
+
+-Kada vlasnik/admin zeli da promeni status nekog zakazanog servisa, to moze da uradi tako sto ukuca sledecu adresu http://127.0.0.1:5000/admin/servisi
+-Na toj adresi imace meni na kojem moze da menja status servisa vozila koji ce automatski da azurira bazu podataka.
+
+
+
+
+
+
+
