@@ -1,0 +1,12 @@
+# Virtuelno okruženje - glavni krivac za pogrešnu statistiku
+.venv/
+venv/
+env/
+
+# Python keš fajlovi
+__pycache__/
+*.pyc
+
+# Podešavanja editora
+.vscode/
+
