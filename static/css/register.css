@@ -1,13 +1,31 @@
+body{
+    background-color: #1a1a1a;
+}
 
-.login-kontejner {
+/*Navigacija*/
+.logo h2 a{
+    color: white;
+    text-decoration: none;
+}
+.nazad-na-pocetnu{
+    color: white;
+    text-decoration: none;
+}
+
+/*Login*/
+#forma-naslov{
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.login-kontejner{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 70vh; 
     padding: 20px;
 }
-
-.login-forma {
+.login-forma{
     background-color: #111;
     padding: 40px;
     border-radius: 8px;
@@ -18,14 +36,12 @@
     flex-direction: column;
     border: 1px solid #333;
 }
-
-.login-forma label {
+.login-forma label{
     color: white;
-    margin-bottom: 8px;
+    margin: 8px 0;
     font-size: 14px;
 }
-
-.login-forma input {
+.login-forma input{
     padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #444;
@@ -34,12 +50,10 @@
     color: white;
     font-size: 15px;
 }
-
 .login-forma input:focus {
     outline: none;
     border-color: #cc0000; 
 }
-
 .greska-poruka {
     color: #ff4444;
     background-color: rgba(255, 68, 68, 0.1);
@@ -50,20 +64,14 @@
     border: 1px solid #ff4444;
     font-size: 14px;
 }
-
 .registracija-link {
     text-align: center;
     color: #888;
     margin-top: 25px;
     font-size: 14px;
 }
-
-.registracija-link a {
+.registracija-link a{
     color: #cc0000;
     text-decoration: none;
     font-weight: bold;
-}
-
-.registracija-link a:hover {
-    text-decoration: underline;
 }

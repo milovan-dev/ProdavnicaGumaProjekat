@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registracija - Servis&Gume</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body style="background-color: #1a1a1a;">
+<body>
 
     <nav class="glavna-navigacija">
         <div class="logo">
-            <h2><a href="/" style="color: white; text-decoration: none;">🛞 Servis&Gume</a></h2>
+            <h2><a href="/">🛞 Servis&Gume</a></h2>
         </div>
         <div class="navigacija-desno">
-            <a href="/" class="nazad-na-pocetnu" style="color: white; text-decoration: none;">⬅ NAZAD NA POČETNU</a>
+            <a href="/" class="nazad-na-pocetnu">⬅ NAZAD NA POČETNU</a>
         </div>
     </nav>
 
     <div class="login-kontejner">
         <form action="/register" method="POST" class="login-forma">
-            <h2 style="color: white; text-align: center; margin-bottom: 25px;">Otvorite nalog</h2>
+            <h2 id="forma-naslov">Otvorite nalog</h2>
             
             {% if greska %}
                 <div class="greska-poruka">{{ greska }}</div>
